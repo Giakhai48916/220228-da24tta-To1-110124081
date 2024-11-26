@@ -56,7 +56,14 @@ int ktsoam(float a[],int n)
 	}
 	if(dem==0)
 	return 0;
-	return 1;
+	else
+	{
+		if(dem==n)
+		return 1;
+		else
+		return 0;
+	}
+
 }
 int vitrilon(float a[],int n)
 {
@@ -197,4 +204,3 @@ void nhapmang(float a[], int n)
 		scanf("%f", &a[i]);
 	}
 }
-
