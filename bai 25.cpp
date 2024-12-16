@@ -165,7 +165,7 @@ void nhapdanhsach(sinh_vien *a,int n)
 		
 		printf("\nmoi nhap cai dia chi: ");
 		fflush(stdin);
-		gets((a+i)->diachi);
+		scanf("%s",(a+i)->diachi);
 	}
 }
 void nhapmon(monhoc *c,int l)
