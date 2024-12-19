@@ -26,9 +26,19 @@ int main()
 {
 	//Khai bao bien
 	int n;
-	char k[10];
+	char k[10],dan[50];
 	SP *a;
+	FILE *b;
 	
+	printf("\nmoi nhap duong dan");
+	fflush(stdin);
+	gets(dan);
+	
+	b=fopen(dan,"wb");
+	if(b==NULL)
+	printf("\nloi file");
+	else
+	{
 	//Xu ly
 	printf("\nmoi nhap so luong san pham: ");
 	scanf("%d",&n);
@@ -63,7 +73,9 @@ int main()
 	printf("\nsan pham duoc sap xep theo gia tang dan: ");
 	sapxepSP(a,n);
 	
+	fclose(b);
 	return 0;
+	}
 }
 
 void nhapSP(SP *a)
@@ -194,7 +206,7 @@ void nhapDSSP(SP *a,int n)
 {
 	for(int i=0;i<n;i++)
 	{
-		printf("\nNhap san pham tai vi tri %d: \n", i);
+		printf("\nNhap san pham tai vi tri %d: \n", i+1);
 		nhapSP(a+i);
 	}
 }
